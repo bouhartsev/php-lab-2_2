@@ -31,4 +31,4 @@ jobs:
             echo " "
             echo "Deploying project..."
             echo $(git status)
-            git ftp push --auto-init --force --all --user "${FTP_USER}" --passwd "${FTP_PWD}" "${FTP_ROOT}/htdocs/"
+            git ftp push --auto-init --force --all --user "${FTP_USER}" --passwd "${FTP_PWD}" "${FTP_ROOT}/htdocs/server/course2/lab2/"
