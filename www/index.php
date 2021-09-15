@@ -1,11 +1,11 @@
 <?php
  
 spl_autoload_register(function (string $className) {
-    require_once __DIR__ . '/../src/' . $className . '.php';
+    require_once '../src/' . $className . '.php';
 });
  
 $route = $_GET['route'] ?? '';
-$routes = require __DIR__ . '/../src/routes.php';
+$routes = require '../src/routes.php';
  
 $isRouteFound = false;
 foreach ($routes as $pattern => $controllerAndAction) {
