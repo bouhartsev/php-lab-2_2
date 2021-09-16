@@ -2,11 +2,24 @@
 
 namespace MVC\Controllers;
  
+use MVC\Views\View;
+ 
 class MainController
 {
+    private $view;
+ 
+    public function __construct()
+    {
+        $this->view = new View(__DIR__ . '/../../../templates');
+    }
+ 
     public function main()
     {
-        echo 'It is the main page';
+        $articles = [
+            ['name' => 'Статья 1', 'text' => 'Текст статьи 1'],
+            ['name' => 'Статья 2', 'text' => 'Текст статьи 2'],
+        ];
+        $this->view->renderHtml('main/main.php', ['articles' => $articles]);
     }
  
     public function sayHello(string $name)
