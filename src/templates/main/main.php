@@ -10,7 +10,7 @@
 <br>
 
 <?php
-    echo file_get_contents('https://polytech.bouhartsev.top/server/course2/lab2/styles/main.css');
+    echo file_get_contents('http://polytech.bouhartsev.top/server/course2/lab2/styles/main.css');
 ?>
 
 <br>
