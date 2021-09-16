@@ -1,8 +1,8 @@
 <?php
 
-namespace MVC\View;
+namespace MVC\Views;
  
-class View
+class MainView
 {
     private $templatesPath;
  

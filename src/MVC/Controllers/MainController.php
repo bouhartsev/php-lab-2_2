@@ -2,7 +2,7 @@
 
 namespace MVC\Controllers;
  
-use MVC\Views\View;
+use MVC\Views\MainView;
  
 class MainController
 {
