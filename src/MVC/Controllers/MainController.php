@@ -26,7 +26,7 @@ class MainController
 
     public function styles(string $file)
     {
-        $this->style->render($file, ['articles' => $articles]);
+        $this->style->render($file, ['articles' => $articles], 'css');
     }
  
     public function sayHello(string $name)
