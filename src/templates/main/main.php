@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Мой блог</title>
-    <!-- <link rel="stylesheet" href="/styles/styles.css"> -->
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
  

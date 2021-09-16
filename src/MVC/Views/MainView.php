@@ -11,7 +11,7 @@ class MainView
         $this->templatesPath = $templatesPath;
     }
  
-    public function renderHtml(string $templateName, array $vars = [])
+    public function render(string $templateName, array $vars = [])
     {
         extract($vars);
  

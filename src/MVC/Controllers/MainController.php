@@ -6,11 +6,13 @@ use MVC\Views\MainView;
  
 class MainController
 {
-    private $view;
+    private $template;
+    private $style;
  
     public function __construct()
     {
-        $this->view = new MainView(__DIR__ . '/../../templates');
+        $this->template = new MainView(__DIR__ . '/../../templates');
+        $this->style = new MainView(__DIR__ . '/../../styles');
     }
  
     public function main()
@@ -19,7 +21,8 @@ class MainController
             ['name' => 'Статья 1', 'text' => 'Текст статьи 1'],
             ['name' => 'Статья 2', 'text' => 'Текст статьи 2'],
         ];
-        $this->view->renderHtml('main/main.php', ['articles' => $articles]);
+        $this->template->render('main/main.php', ['articles' => $articles]);
+        $this->style->render('main.css', ['articles' => $articles]);
     }
  
     public function sayHello(string $name)
