@@ -10,7 +10,7 @@ class MainController
  
     public function __construct()
     {
-        $this->view = new MainView(__DIR__ . '/../../../templates');
+        $this->view = new MainView(__DIR__ . '/../../templates');
     }
  
     public function main()
