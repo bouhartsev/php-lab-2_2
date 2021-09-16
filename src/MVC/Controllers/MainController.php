@@ -22,7 +22,11 @@ class MainController
             ['name' => 'Статья 2', 'text' => 'Текст статьи 2'],
         ];
         $this->template->render('main/main.php', ['articles' => $articles]);
-        $this->style->render('main.css', ['articles' => $articles]);
+    }
+
+    public function styles(string $file)
+    {
+        $this->style->render($file, ['articles' => $articles]);
     }
  
     public function sayHello(string $name)
