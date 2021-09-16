@@ -11,12 +11,15 @@ class MainView
         $this->templatesPath = $templatesPath;
     }
  
-    public function render(string $templateName, array $vars = [], string $type = "html")
+    public function render(string $templateName, array $vars = [])
     {
         extract($vars);
  
+        $file = $this->templatesPath . '/' . $templateName;
         include $this->templatesPath . '/' . $templateName;
-        if ($type=='css') header('Content-Type: text/css');
+
+        $type = mime_content_type($file);
+        if ($type) header('Content-Type: '.$type); // рендер статики, вроде стилей и т.п.
     }
 }
 

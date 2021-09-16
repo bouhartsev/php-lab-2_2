@@ -7,19 +7,6 @@
 </head>
 <body>
 
-<br>
-
-<?php
-    echo file_get_contents('http://polytech.bouhartsev.top/server/course2/lab2/styles/main.css');
-?>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 <table class="layout">
     <tr>
         <td colspan="2" class="header">
