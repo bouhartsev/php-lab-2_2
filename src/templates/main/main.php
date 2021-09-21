@@ -8,6 +8,19 @@
 <body>
 
 <table class="layout">
+
+
+<?php
+    echo '// '.mime_content_type("./styles/main.css").' | '.file_get_contents("./styles/main.css");
+?>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
     <tr>
         <td colspan="2" class="header">
             Мой блог
