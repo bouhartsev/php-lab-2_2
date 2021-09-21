@@ -11,7 +11,7 @@
 
 
 <?php
-    echo '// '.mime_content_type("./styles/main.css").' | '.file_get_contents("./styles/main.css");
+    echo '// '.mime_content_type("https://polytech.bouhartsev.top/server/course2/lab2/styles/main.css").' | '.file_get_contents("https://polytech.bouhartsev.top/server/course2/lab2/styles/main.css");
 ?>
 
 <br>
