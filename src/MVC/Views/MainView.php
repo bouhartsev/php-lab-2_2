@@ -19,6 +19,7 @@ class MainView
         include $this->templatesPath . '/' . $templateName;
 
         $type = mime_content_type($file);
+        echo '// '.$type;
         if ($type) header('Content-Type: '.$type); // рендер статики, вроде стилей и т.п.
     }
 }

@@ -8,19 +8,6 @@
 <body>
 
 <table class="layout">
-
-
-<?php
-    echo '// '.mime_content_type("https://polytech.bouhartsev.top/server/course2/lab2/styles/main.css").' | '.file_get_contents("https://polytech.bouhartsev.top/server/course2/lab2/styles/main.css");
-?>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
     <tr>
         <td colspan="2" class="header">
             Мой блог
