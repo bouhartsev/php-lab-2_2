@@ -108,6 +108,8 @@ class MainView
 
         $buffer = ob_get_contents();
         ob_end_clean();
+
+        echo $buffer;
     }
 }
 
