@@ -30,30 +30,3 @@ class DB
         return $sth->fetchAll();
     }
 }
-
-
-<?php
- 
-namespace MyProject\Controllers;
- 
-use MVC\Services\DB;
-use MVC\View\View;
- 
-class MainController
-{
-    private $view;
-    private $db;
- 
-    public function __construct()
-    {
-        $this->view = new View(__DIR__ . '/../../../templates');
-        $this->db = new DB();
-    }
- 
-    public function main()
-    {
-        $articles = $this->db->query('SELECT * FROM `articles`;');
-        var_dump($articles);
-        //$this->view->renderHtml('main/main.php', ['articles' => $articles]);
-    }
-}
