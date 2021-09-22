@@ -21,7 +21,6 @@ class MainController
     public function main()
     {
         $articles = $this->db->query('SELECT * FROM `articles`;');
-        var_dump($articles);
         // $articles = [
         //     ['name' => 'Статья 1', 'text' => 'Текст статьи 1'],
         //     ['name' => 'Статья 2', 'text' => 'Текст статьи 2'],

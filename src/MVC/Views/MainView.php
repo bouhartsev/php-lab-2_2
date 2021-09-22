@@ -99,17 +99,19 @@ class MainView
         else $title = '';
         $title .= $projectName;
 
+        var_dump($title);
+
         ob_start();
         include $this->templatesPath . '/header.php';
         include $file;
         include $this->templatesPath . '/footer.php';
-        $type = mime_content_type($file);
-        if ($type) header('Content-Type: '.$type); // рендер статики, вроде стилей и т.п.
-
         $buffer = ob_get_contents();
         ob_end_clean();
 
         echo $buffer;
+
+        $type = mime_content_type($file);
+        if ($type) header('Content-Type: '.$type); // рендер статики, вроде стилей и т.п.
     }
 }
 
