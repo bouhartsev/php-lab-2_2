@@ -1,11 +1,13 @@
 <?php
 
 namespace MVC\Controllers;
- 
+
+use MVC\Services\DB;
 use MVC\Views\MainView;
  
 class MainController
 {
+    private $db;
     private $template;
     private $style;
  
@@ -17,10 +19,12 @@ class MainController
  
     public function main()
     {
-        $articles = [
-            ['name' => 'Статья 1', 'text' => 'Текст статьи 1'],
-            ['name' => 'Статья 2', 'text' => 'Текст статьи 2'],
-        ];
+        $articles = $this->db->query('SELECT * FROM `articles`;');
+        // $articles = [
+        //     ['name' => 'Статья 1', 'text' => 'Текст статьи 1'],
+        //     ['name' => 'Статья 2', 'text' => 'Текст статьи 2'],
+        // ];
+
         $this->template->render('main/main.php', ['articles' => $articles]);
     }
 
@@ -31,7 +35,7 @@ class MainController
  
     public function sayHello(string $name)
     {
-        echo 'Hello, ' . $name . '!';
+        $this->view->renderHtml('main/hello.php', ['username' => $name, 'title' => 'Страница приветствия']);
     }
     
     public function sayBye(string $name)

@@ -82,6 +82,7 @@ namespace MVC\Views;
 class MainView
 {
     private $templatesPath;
+    private $projectName='MVC на PHP';
  
     public function __construct(string $templatesPath)
     {
@@ -93,10 +94,20 @@ class MainView
         extract($vars);
  
         $file = $this->templatesPath . '/' . $templateName;
-        include $this->templatesPath . '/' . $templateName;
+        
+        if ($title) $title .= ' | ';
+        else $title = '';
+        $title .= $projectName;
 
+        ob_start();
+        include $this->templatesPath . '/header.php';
+        include $file;
+        include $this->templatesPath . '/footer.php';
         $type = mime_content_type($file);
         if ($type) header('Content-Type: '.$type); // рендер статики, вроде стилей и т.п.
+
+        $buffer = ob_get_contents();
+        ob_end_clean();
     }
 }
 
