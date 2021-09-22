@@ -13,6 +13,7 @@ class MainController
  
     public function __construct()
     {
+        $this->db = new DB();
         $this->template = new MainView(__DIR__ . '/../../templates');
         $this->style = new MainView(__DIR__ . '/../../styles');
     }

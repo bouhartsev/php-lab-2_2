@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title><?= $title ?></title>
-    <link rel="stylesheet" href="/styles.css">
+    <title><?php echo $title ?></title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
  
