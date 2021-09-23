@@ -1,7 +1,7 @@
 <?php
-namespace MyProject\Models\Users;
+namespace MVC\Models\Users;
 
-use MyProject\Models\ActiveRecordEntity;
+use MVC\Models\ActiveRecordEntity;
 
 class User extends ActiveRecordEntity
 {
