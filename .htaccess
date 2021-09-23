@@ -1,7 +1,7 @@
 RewriteEngine On
  
 RewriteCond %{SCRIPT_FILENAME} !-f
-RewriteRule ^(.*)styles/(.*)$ ./www/styles/$1 [QSA,L]
+RewriteRule ^(.*)styles/(.*)$ ./www/styles/$2 [QSA,L]
 
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteRule ^(.*)$ ./www/index.php?route=$1 [QSA,L]
