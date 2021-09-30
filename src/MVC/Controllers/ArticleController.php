@@ -1,5 +1,5 @@
 <?php
-namespace my_project\controllers;
+namespace MVC\controllers;
 use MVC\Views\MainView;
 use MVC\Models\Articles\Article;
 use MVC\Models\Users\User;
