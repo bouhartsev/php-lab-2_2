@@ -5,6 +5,7 @@ namespace MVC\Services;
 class DB
 {
     private $pdo;
+    private static $instance;
  
     public function __construct()
     {
@@ -28,5 +29,14 @@ class DB
         }
  
         return $sth->fetchAll();
+    }
+
+    public static function getInstance(): self
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
     }
 }

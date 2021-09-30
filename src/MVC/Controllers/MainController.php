@@ -8,12 +8,10 @@ use MVC\Models\Articles\Article;
  
 class MainController
 {
-    private $db;
     private $view;
  
     public function __construct()
     {
-        $this->db = new DB();
         $this->view = new MainView(__DIR__ . '/../../templates');
     }
  
