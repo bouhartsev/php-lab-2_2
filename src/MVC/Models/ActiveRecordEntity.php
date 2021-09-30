@@ -26,13 +26,13 @@ abstract class ActiveRecordEntity
 
     public static function findAll(): array
     {
-        $db = $db = Db::getInstance();
+        $db = DB::getInstance();
         return $db->query('SELECT * FROM `' . static::getTableName() . '`;', [], static::class);
     }
     
     public static function getById(int $id): ?self
     {
-        $db = $db = Db::getInstance();
+        $db = DB::getInstance();
         $entities = $db->query(
             'SELECT * FROM `' . static::getTableName() . '` WHERE id=:id;',
             [':id' => $id],
@@ -43,7 +43,7 @@ abstract class ActiveRecordEntity
 
     public function save(): void
     {
-        $mappedProperties = $this->mapPropertiesToDbFormat();
+        $mappedProperties = $this->mapPropertiesToDBFormat();
         if ($this->id !== null) {
             $this->update($mappedProperties);
         } else {
@@ -53,7 +53,7 @@ abstract class ActiveRecordEntity
 
     public function delete(): void
     {
-        $db = Db::getInstance();
+        $db = DB::getInstance();
         $db->query(
             'DELETE FROM `' . static::getTableName() . '` WHERE id = :id',
             [':id' => $this->id]
@@ -63,7 +63,7 @@ abstract class ActiveRecordEntity
 
     public static function findOneByColumn(string $columnName, $value): ?self
     {
-        $db = Db::getInstance();
+        $db = DB::getInstance();
         $result = $db->query(
             'SELECT * FROM `' . static::getTableName() . '` WHERE `' . $columnName . '` = :value LIMIT 1;',
             [':value' => $value],
@@ -89,7 +89,7 @@ abstract class ActiveRecordEntity
             $index++;
         }
         $sql = 'UPDATE ' . static::getTableName() . ' SET ' . implode(', ', $columns2params) . ' WHERE id = ' . $this->id;
-        $db = Db::getInstance();
+        $db = DB::getInstance();
         $db->query($sql, $params2values, static::class);
     }
 
@@ -112,7 +112,7 @@ abstract class ActiveRecordEntity
 
         $sql = 'INSERT INTO ' . static::getTableName() . ' (' . $columnsViaSemicolon . ') VALUES (' . $paramsNamesViaSemicolon . ');';
 
-        $db = Db::getInstance();
+        $db = DB::getInstance();
         $db->query($sql, $params2values, static::class);
         $this->id = $db->getLastInsertId();
         $this->refresh();
@@ -120,18 +120,18 @@ abstract class ActiveRecordEntity
 
     private function refresh(): void
     {
-        $objectFromDb = static::getById($this->id);
-        $reflector = new \ReflectionObject($objectFromDb);
+        $objectFromDB = static::getById($this->id);
+        $reflector = new \ReflectionObject($objectFromDB);
         $properties = $reflector->getProperties();
 
         foreach ($properties as $property) {
             $property->setAccessible(true);
             $propertyName = $property->getName();
-            $this->$propertyName = $property->getValue($objectFromDb);
+            $this->$propertyName = $property->getValue($objectFromDB);
         }
     }
 
-    private function mapPropertiesToDbFormat(): array
+    private function mapPropertiesToDBFormat(): array
     {
         $reflector = new \ReflectionObject($this);
         $properties = $reflector->getProperties();
