@@ -38,7 +38,8 @@ abstract class ActiveRecordEntity
             [':id' => $id],
             static::class
         );
-        return $entities ? $entities[0] : null;
+        $entity = ($entities)? $entities[0] : null;
+        return $entity;
     }
 
     public function save(): void
