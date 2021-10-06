@@ -17,7 +17,7 @@ class ArticleController{
             $this->view->render('errors/404.php', [], 404);
             return;
         }
-        var_dump(result);
+        var_dump($result);
         $this->view->render('articles/view.php', ['article' => $result]);
     }
 
@@ -36,12 +36,12 @@ class ArticleController{
     public function add() {
         $author = User::getById(0);
 
+        var_dump($author);
         $article = new Article();
         $article->setAuthor($author);
         $article->setName('Заголовок');
         $article->setText('Текст');
         $article->save();
-        var_dump($article);
         echo 'THe article has been added';
     }
 }
