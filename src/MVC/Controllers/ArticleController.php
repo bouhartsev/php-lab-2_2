@@ -8,7 +8,7 @@ class ArticleController{
     private $view;
 
     public function __construct(){
-        $this->view = new View(__DIR__.'/../../templates');
+        $this->view = new MainView (__DIR__.'/../../templates');
     }
 
     public function view(int $articleId){
