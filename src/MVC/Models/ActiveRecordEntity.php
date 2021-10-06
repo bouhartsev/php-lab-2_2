@@ -33,13 +33,8 @@ abstract class ActiveRecordEntity
     public static function getById(int $id): ?self
     {
         $db = DB::getInstance();
-        $entities = $db->query(
-            'SELECT * FROM `' . static::getTableName() . '` WHERE id=:id;',
-            [':id' => $id],
-            static::class
-        );
+        $entities=$db->query('SELECT * FROM '.static::getTableName().' WHERE id='.$id, [], static::class);
         $entity = ($entities)? $entities[0] : null;
-        var_dump($db, $entities, $entity);
         return $entity;
     }
 

@@ -13,7 +13,6 @@ class ArticleController{
 
     public function view(int $articleId){
         $result = Article::getById($articleId);
-        echo 'Article ID: '.$articleId.' '.
         var_dump($result);
         if (!$result) {
             $this->view->render('errors/404.php', [], 404);
