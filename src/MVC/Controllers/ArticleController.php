@@ -1,5 +1,5 @@
 <?php
-namespace MVC\controllers;
+namespace MVC\Controllers;
 use MVC\Views\MainView;
 use MVC\Models\Articles\Article;
 use MVC\Models\Users\User;
@@ -14,16 +14,16 @@ class ArticleController{
     public function view(int $articleId){
         $result = Article::getById($articleId);
         if ($result === []) {
-            $this->view->renderHtml('errors/404.php', [], 404);
+            $this->view->render('errors/404.php', [], 404);
             return;
         }
-        $this->view->renderHtml('articles/view.php', ['article' => $result]);
+        $this->view->render('articles/view.php', ['article' => $result]);
     }
 
     public function edit(int $articleId) {
         $result = Article::getById($articleId);
         if ($result === []) {
-            $this->view->renderHtml('errors/404.php', [], 404);
+            $this->view->render('errors/404.php', [], 404);
             return;
         }
 
