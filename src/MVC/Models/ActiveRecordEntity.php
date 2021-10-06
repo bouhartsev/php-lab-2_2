@@ -39,6 +39,7 @@ abstract class ActiveRecordEntity
             static::class
         );
         $entity = ($entities)? $entities[0] : null;
+        var_dump($db, $entities, $entity);
         return $entity;
     }
 
