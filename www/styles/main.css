@@ -7,9 +7,10 @@
 }
 
 .sidebar {
+    box-sizing: border-box;
     position: fixed;
     right: 0;
-    width: 20%;
+    width: 30%;
     padding: 20px;
 }
 
@@ -19,11 +20,14 @@
 }
 
 .main {
-    width: 80%;
+    box-sizing: border-box;
+    width: 70%;
 }
 
 .article-link {
     position: relative;
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
 .article-link>a {
@@ -34,6 +38,10 @@
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.article-link h2, .article-link p {
+    margin-top: 0;
 }
 
 .visually-hidden {
@@ -47,14 +55,14 @@
 }
 
 a {
-    color: rgb(0, 0, 133);
+    color: rgb(14, 14, 177);
     text-decoration: none;
 }
 
 a:hover {
-    color:rgb(74, 74, 190)
+    color:rgb(105, 105, 233)
 }
 
 a:visited {
-    color:rgb(25, 25, 87)
+    color:rgb(38, 38, 129)
 }
