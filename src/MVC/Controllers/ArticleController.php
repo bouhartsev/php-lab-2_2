@@ -34,7 +34,7 @@ class ArticleController{
     }
 
     public function add() {
-        $author = User::getById(0);
+        $author = User::getById(1);
 
         var_dump($author);
         $article = new Article();
