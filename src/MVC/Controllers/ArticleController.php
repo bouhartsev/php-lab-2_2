@@ -17,7 +17,7 @@ class ArticleController{
             $this->view->render('errors/404.php', [], 404);
             return;
         }
-        $this->view->render('articles/view.php', ['article' => $result]);
+        $this->view->render('articles/view.php', ['article' => $result, 'title' => $result->getName()]);
     }
 
     public function edit(int $articleId) {

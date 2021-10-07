@@ -9,7 +9,7 @@
 <header class="header">
     <h1><?= $title ?></h1>
 </header>
-<aside>
+<aside class="sidebar">
     <nav>
         <p>Меню</p>
         <ul>
