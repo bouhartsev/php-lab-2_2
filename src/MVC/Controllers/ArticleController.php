@@ -35,12 +35,11 @@ class ArticleController{
     public function add() {
         $author = User::getById(1);
 
-        var_dump($author);
         $article = new Article();
         $article->setAuthor($author);
         $article->setName('Заголовок');
         $article->setText('Текст');
         $article->save();
-        echo 'THe article has been added';
+        echo 'THe article "Заголовок" has been added';
     }
 }
