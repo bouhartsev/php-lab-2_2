@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-<header class="header">
-    <h1><?= $title ?></h1>
-</header>
 <aside class="sidebar">
     <nav>
         <p>Меню</p>
@@ -18,4 +15,7 @@
         </ul>
     </nav>
 </aside>
+<header class="header">
+    <h1><?= $projectName ?></h1>
+</header>
 <main>

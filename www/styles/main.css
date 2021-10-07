@@ -13,7 +13,7 @@
 }
 
 .header {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .footer {
@@ -29,6 +29,10 @@
 
 .main {
     width: 80%;
+}
+
+.article-link {
+    position: relative;
 }
 
 .article-link>a {

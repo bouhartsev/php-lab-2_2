@@ -82,7 +82,6 @@ namespace MVC\Views;
 class MainView
 {
     private $templatesPath;
-    private $projectName='MVC на PHP';
  
     public function __construct(string $templatesPath)
     {
@@ -95,9 +94,10 @@ class MainView
  
         $file = $this->templatesPath . '/' . $templateName;
         
+        const $projectName='MVC на PHP';
         if ($title) $title .= ' | ';
         else $title = '';
-        $title .= $this->projectName;
+        $title .= $projectName;
 
         ob_start();
         include $this->templatesPath . '/header.php';
