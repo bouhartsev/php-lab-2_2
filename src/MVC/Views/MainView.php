@@ -97,7 +97,7 @@ class MainView
         
         if ($title) $title .= ' | ';
         else $title = '';
-        $title .= $projectName;
+        $title .= $this->projectName;
 
         ob_start();
         include $this->templatesPath . '/header.php';

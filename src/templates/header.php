@@ -16,6 +16,6 @@
     </nav>
 </aside>
 <header class="header">
-    <h1><?= $this->$projectName ?></h1>
+    <h1><?= $this->projectName ?></h1>
 </header>
 <main>
