@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
- 
-<table class="layout">
-    <tr>
-        <td colspan="2" class="header">
-            <?= $title ?>
-        </td>
-    </tr>
-    <tr>
-        <td>
+<header>
+    <h1><?= $title ?></h1>
+</header>
+<aside>
+    <nav>
+        <p>Меню</p>
+        <ul>
+            <li><a href="https://polytech.bouhartsev.top/server/">Вернуться к PHP</a></li>
+            <li><a href="https://polytech.bouhartsev.top/server/course2/lab2/articles/add">Перейти к добавлению статьи</a></li>
+        </ul>
+    </nav>
+</aside>
+<main>
