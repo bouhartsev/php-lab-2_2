@@ -1,17 +1,7 @@
-        </td>
- 
-        <td width="300px" class="sidebar">
-            <div class="sidebarHeader">Меню</div>
-            <ul>
-                <li><a href="/">Главная страница</a></li>
-                <li><a href="/about-me">Обо мне</a></li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td class="footer" colspan="2">Все права отсутствуют (c) <a href="//bouhartsev.top">bouhartsev</a></td>
-    </tr>
-</table>
- 
+</main>
+<footer class="footer">
+    <p>Этот проект на <a href="https://github.com/bouhartsev/php-lab-2_2">GitHub</a></p>
+    <p>Все права не защищены (с) <a href="//bouhartsev.top">Matvey Bouhartsev</a></p>
+</footer>
 </body>
 </html>

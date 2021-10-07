@@ -13,11 +13,11 @@ class ArticleController{
 
     public function view(int $articleId){
         $result = Article::getById($articleId);
-        if ($result === []) {
+        if (!$result) {
             $this->view->render('errors/404.php', [], 404);
             return;
         }
-        $this->view->render('articles/view.php', ['article' => $result]);
+        $this->view->render('articles/view.php', ['article' => $result, 'title' => $result->getName()]);
     }
 
     public function edit(int $articleId) {
@@ -32,13 +32,14 @@ class ArticleController{
         $result->save();
     }
 
-    public function add() {
-        $author = User::getById(1);
+    public function add($name='Заголовок', $text='Текст статьи', $authorId='1') {
+        $author = User::getById((int)$authorId);
 
         $article = new Article();
         $article->setAuthor($author);
-        $article->setName('Заголовок');
-        $article->setText('Текст');
+        $article->setName($name);
+        $article->setText($text);
         $article->save();
+        echo 'The article "Заголовок" has been added';
     }
 }

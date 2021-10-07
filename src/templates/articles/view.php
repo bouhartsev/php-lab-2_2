@@ -1,3 +1,3 @@
-<h1><?=$article->getName()?></h1>
+<h2><?=$article->getName()?></h2>
 <p>Автор: <?=$article->getAuthor()->getNickname()?></p>
 <p><?=$article->getText()?></p>

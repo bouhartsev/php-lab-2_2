@@ -6,12 +6,17 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
- 
-<table class="layout">
-    <tr>
-        <td colspan="2" class="header">
-            <?= $title ?>
-        </td>
-    </tr>
-    <tr>
-        <td>
+<aside class="sidebar">
+    <nav>
+        <p>Меню</p>
+        <ul>
+            <li><a href="https://polytech.bouhartsev.top/server/course2/lab2/articles/add">Перейти к добавлению статьи</a></li>
+            <li><a href="https://polytech.bouhartsev.top/server/course2/lab2/">Вернуться на главную лабораторной</a></li>
+            <li><a href="https://polytech.bouhartsev.top/server/">Вернуться к PHP</a></li>
+        </ul>
+    </nav>
+</aside>
+<header class="header">
+    <h1><a href="https://polytech.bouhartsev.top/server/course2/lab2/"><?= $this->projectName ?></a></h1>
+</header>
+<main class="main">

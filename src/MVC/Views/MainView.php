@@ -82,7 +82,7 @@ namespace MVC\Views;
 class MainView
 {
     private $templatesPath;
-    private $projectName='MVC на PHP';
+    public $projectName='MVC на PHP';
  
     public function __construct(string $templatesPath)
     {

@@ -1,33 +1,68 @@
-.layout {
-    width: 100%;
-    max-width: 1024px;
-    margin: auto;
-    background-color: white;
-    border-collapse: collapse;
-}
-
-.layout tr td {
-    padding: 20px;
-    vertical-align: top;
-    border: solid 1px gray;
-}
-
 .header {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .footer {
     text-align: center;
 }
 
-.sidebarHeader {
-    font-size: 20px;
+.sidebar {
+    box-sizing: border-box;
+    position: fixed;
+    right: 0;
+    width: 30%;
+    padding: 20px;
 }
 
 .sidebar ul {
-    padding-left: 20px;
+    padding: 0;
+    list-style: none;
 }
 
-a, a:visited {
-    color: darkgreen;
+.main {
+    box-sizing: border-box;
+    width: 70%;
+}
+
+.article-link {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.article-link>a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.article-link h2, .article-link p {
+    margin-top: 0;
+}
+
+.visually-hidden {
+    visibility: hidden;
+    position: absolute;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+a {
+    color: rgb(14, 14, 177);
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgb(105, 105, 233)
+}
+
+a:visited {
+    color:rgb(38, 38, 129)
 }
