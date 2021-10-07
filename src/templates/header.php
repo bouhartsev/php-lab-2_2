@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-<header>
+<header class="header">
     <h1><?= $title ?></h1>
 </header>
 <aside>
